@@ -1,5 +1,5 @@
 Técnica Electiva III
-Alicia Lourdes Pérez de Meléndez
+Alicia Lourdes Pérez Angel
 PA201703
 
 Notas:
