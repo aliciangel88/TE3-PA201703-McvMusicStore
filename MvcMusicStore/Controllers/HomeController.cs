@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MvcMusicStore.Models;
 
 namespace MvcMusicStore.Controllers
 {
@@ -13,9 +14,10 @@ namespace MvcMusicStore.Controllers
         {
             return View();
         }
+
         /*public string Index()
         {
-            return "Hello from Home";
+            return "Hello from Store.Index()";
         }*/
     }
 }
