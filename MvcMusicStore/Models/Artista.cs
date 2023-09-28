@@ -5,11 +5,9 @@ using System.Web;
 
 namespace MvcMusicStore.Models
 {
-    public partial class Genero
+    public class Artista
     {
-        public int GeneroId { get; set; }
+        public int ArtistId { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }
-        public List<Album> Albums { get; set; }
     }
 }
