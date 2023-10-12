@@ -9,13 +9,14 @@ namespace MvcMusicStore.Controllers
 {
     public class StoreController : Controller
     {
-       // GET: /Store/
-       /* public string Index()
-        {
-            return "Hello from Store.Index()";
-        }*/
+        // GET: /Store/
+        /* public string Index()
+         {
+             return "Hello from Store.Index()";
+         }*/
         //
         // GET: /Store/Browse
+        MusicStoreEntities storeDB = new MusicStoreEntities();
         public string BrowseM()
         {
             return "Hello from Store.Browse()";
@@ -49,7 +50,7 @@ namespace MvcMusicStore.Controllers
             var album = new Album { Title = "Album " + Id };
             return View(album);
         }
-        public ActionResult Index()
+        /*public ActionResult Index()
         {
             var genero = new List<Genero>
             {
@@ -57,6 +58,12 @@ namespace MvcMusicStore.Controllers
                 new Genero { Name = "Jazz"},
                 new Genero { Name = "Rock"}
             };
+            return View(genero);
+        }*/
+        public ActionResult Index()
+        {
+            var genero = storeDB.genero.ToList();
+            Console.WriteLine(genero);
             return View(genero);
         }
         public ActionResult Browse(string genero)

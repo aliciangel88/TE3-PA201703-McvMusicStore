@@ -6,9 +6,10 @@ using System.Data.Entity;
 
 namespace MvcMusicStore.Models
 {
-    public class MusicStoreEntities : DBContext
+    public class MusicStoreEntities : DbContext
     {
-        public DBset<Album> Albums { get; set; }
-        public DBset<Genero> Genero { get; set; }
+        public DbSet<Album> Albums { get; set; }
+        public DbSet<Genero> genero { get; set; }
+        public DbSet<Artista> Artista { get; set; }
         }
 }

@@ -7,6 +7,7 @@ namespace MvcMusicStore.Models
 {
     public partial class Genero
     {
+        [System.ComponentModel.DataAnnotations.Key]
         public int GeneroId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
