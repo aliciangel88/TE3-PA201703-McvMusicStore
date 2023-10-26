@@ -15,9 +15,8 @@ namespace MvcMusicStore
         {
             AppDomain.CurrentDomain.SetData("DataDirectory", Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData));
 
-            System.Data.Entity.Database.SetInitializer<MusicStoreEntities>(
-                new MvcMusicStore.Models.SampleData());
-
+            //System.Data.Entity.Database.SetInitializer<MusicStoreEntities>(new MvcMusicStore.Models.SampleData());
+            Database.SetInitializer<MusicStoreEntities>(new SampleData());
 
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);

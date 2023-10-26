@@ -47,7 +47,7 @@ namespace MvcMusicStore.Controllers
 
         public ActionResult Details(int Id)
         {
-            var album = new Album { Title = "Album " + Id };
+            var album = storeDB.Albums.Find(Id);
             return View(album);
         }
         /*public ActionResult Index()
@@ -68,7 +68,8 @@ namespace MvcMusicStore.Controllers
         }
         public ActionResult Browse(string genero)
         {
-            var generoModel = new Genero { Name = genero };
+            var generoModel = storeDB.genero.Include("Albums")
+                .Single(g => g.Name == genero);
             return View(generoModel);
         }
 

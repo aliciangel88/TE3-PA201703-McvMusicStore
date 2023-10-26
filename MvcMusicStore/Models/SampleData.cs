@@ -7,7 +7,7 @@ using MvcMusicStore.Models;
 
 namespace MvcMusicStore.Models
 {
-    public class SampleData : DropCreateDatabaseIfModelChanges<MusicStoreEntities>
+    public class SampleData : DropCreateDatabaseAlways<MusicStoreEntities>
     {
         protected override void Seed(MusicStoreEntities context)
         {
@@ -431,6 +431,7 @@ namespace MvcMusicStore.Models
                 new Album { Title = "Bach: The Cello Suites", Genero = generos.Single(g => g.Name == "Classical"), Price = 8.99M, Artist = artists.Single(a => a.Name == "Yo-Yo Ma"), AlbumArtUrl = "/Content/Images/placeholder.gif" },
                 new Album { Title = "Ao Vivo [IMPORT]", Genero = generos.Single(g => g.Name == "Latin"), Price = 8.99M, Artist = artists.Single(a => a.Name == "Zeca Pagodinho"), AlbumArtUrl = "/Content/Images/placeholder.gif" },
             }.ForEach(a => context.Albums.Add(a));
+            //base.Seed(context);
             context.SaveChanges();
         }
     }
